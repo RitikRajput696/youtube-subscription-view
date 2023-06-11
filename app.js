@@ -5,10 +5,10 @@ const listBtn = document.getElementById('list');
 listBtn.addEventListener('click', () => {
   console.log;
   subscriptionView.classList.remove('grid-layout');
-  subscriptionView.classList.add('list-layout');
+  subscriptionView.classList.add('flex-layout');
 });
 gridBtn.addEventListener('click', () => {
   console.log;
-  subscriptionView.classList.remove('list-layout');
+  subscriptionView.classList.remove('flex-layout');
   subscriptionView.classList.add('grid-layout');
 });

@@ -56,5 +56,8 @@ header .img-container img {
 
 .vid {
     height: 15rem;
-    background-color: black;
+    background-color: rgb(3, 3, 3);
+    color: white;
+    text-align: center;
+    /* margin: 1rem; */
 }
