@@ -5,25 +5,34 @@ const listBtn = document.getElementById('list');
 
 const bgColors = [
   "ff3432",
-  "4da6ff",
-  "9966ff",
-  "cc00ff",
+  "03fce8",
+  "fc03fc",
+  "fcf803",
 ]
 
-console.log(videos);
-
-videos.forEach(video => {
-  const colorItem = bgColors[Math.floor(Math.random() * bgColors.length)];
-  video.style.backgroundColor = "#" + colorItem;
-});
 
 listBtn.addEventListener('click', () => {
-  console.log;
   subscriptionView.classList.remove('grid-layout');
   subscriptionView.classList.add('flex-layout');
 });
 gridBtn.addEventListener('click', () => {
-  console.log;
   subscriptionView.classList.remove('flex-layout');
   subscriptionView.classList.add('grid-layout');
 });
+
+
+
+const vidArr = Array.from(videos);
+
+let counter = 0;
+for (let i = 0; i < vidArr.length; i++) {
+
+  const colorItem = bgColors[counter];
+  vidArr[i].style.backgroundColor = "#" + colorItem;
+  counter++;
+  if (counter == bgColors.length) {
+    counter = 0;
+  }
+
+
+}
